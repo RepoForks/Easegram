@@ -2,6 +2,7 @@
 Desktop Application for Increase Instagram post likes, based on priv8 Alghorithm publiced by Iranian forum.
 https://forum.soft98.ir/showthread.php?t=80623 <br>
 Easegram, Easy on Instagram. Get rest and catch unlimited likes on your posts.
+
 # Used Language
 Written in C# and Visual Studio 2017.
 
@@ -45,3 +46,14 @@ If you are looking for something like this app, there are a programs out there.
 your Account must be public if your account is private, you must change it to public until this app work!
 
 ![Screenshot](Screen.png)
+
+# Known issues
+
+Nothing for now!
+
+# ToDo :<br>
+Multi Post (Read Post links from Txt files and get like automatically.
+
+# License
+
+This program is free software under the MIT. Please see the COPYING file for more.

@@ -53,6 +53,7 @@ Nothing for now!
 
 # ToDo :<br>
 Multi Post (Read Post links from Txt files and get like automatically.
+the command line support.
 
 # License
 

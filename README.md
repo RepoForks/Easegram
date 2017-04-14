@@ -1,6 +1,7 @@
 # Easegram
 ![Screenshot](Screen.png)
-Desktop Application for Increase Instagram post likes, based on priv8 Alghorithm publiced by Iranian forum.
+
+<br>Desktop Application for Increase Instagram post likes, based on priv8 Alghorithm publiced by Iranian forum.
 https://forum.soft98.ir/showthread.php?t=80623 <br>
 Easegram, Easy on Instagram. Get rest and catch unlimited likes on your posts.
 

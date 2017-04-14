@@ -32,8 +32,7 @@ The output will be in either the Release or Debug folder.
 ## Thanks
 
 I definitly could not have done this without the help of several people:
-@CYBER CH, @saleh6000, and @Saneki for [nice Green Flat Theme]
-(https://github.com/saneki/FlatUI).
+@CYBER CH, @saleh6000, and @Saneki for [nice Green Flat Theme](https://github.com/saneki/FlatUI).
 
 If you would like to contribute, everyone is welcome to! If you are considering a major feature, need guidance, 
 or want to talk an idea out, don't hesitate to jump on Gitter (see above), or file an issue. I am often on Gitter and Github, so I should reply fairly quickly.

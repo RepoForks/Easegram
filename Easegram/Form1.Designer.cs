@@ -30,25 +30,25 @@
         {
             this.components = new System.ComponentModel.Container();
             this.FlatSkin = new FlatUI.FormSkin();
-            this.flatMini1 = new FlatUI.FlatMini();
-            this.flatClose1 = new FlatUI.FlatClose();
-            this.status = new FlatUI.FlatStatusBar();
-            this.flatLabel1 = new FlatUI.FlatLabel();
-            this.flatLabel2 = new FlatUI.FlatLabel();
-            this.txtPostId = new FlatUI.FlatTextBox();
-            this.rdRussia = new FlatUI.FlatRadioButton();
-            this.rdUS = new FlatUI.FlatRadioButton();
-            this.btnStart = new FlatUI.FlatButton();
-            this.trkCache = new FlatUI.FlatTrackBar();
-            this.prgStatus = new FlatUI.FlatProgressBar();
-            this.webBrowser1 = new System.Windows.Forms.WebBrowser();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.flatTabControl1 = new FlatUI.FlatTabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.webBrowser1 = new System.Windows.Forms.WebBrowser();
+            this.flatLabel1 = new FlatUI.FlatLabel();
+            this.flatLabel2 = new FlatUI.FlatLabel();
+            this.prgStatus = new FlatUI.FlatProgressBar();
+            this.txtPostId = new FlatUI.FlatTextBox();
+            this.trkCache = new FlatUI.FlatTrackBar();
+            this.rdRussia = new FlatUI.FlatRadioButton();
+            this.btnStart = new FlatUI.FlatButton();
+            this.rdUS = new FlatUI.FlatRadioButton();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.lblinfo = new FlatUI.FlatLabel();
-            this.lbldec = new FlatUI.FlatLabel();
             this.lbldeveloper = new FlatUI.FlatLabel();
+            this.lbldec = new FlatUI.FlatLabel();
+            this.lblinfo = new FlatUI.FlatLabel();
+            this.status = new FlatUI.FlatStatusBar();
+            this.flatClose1 = new FlatUI.FlatClose();
+            this.flatMini1 = new FlatUI.FlatMini();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.FlatSkin.SuspendLayout();
             this.flatTabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -74,173 +74,6 @@
             this.FlatSkin.Size = new System.Drawing.Size(704, 401);
             this.FlatSkin.TabIndex = 0;
             this.FlatSkin.Text = "Easegram";
-            // 
-            // flatMini1
-            // 
-            this.flatMini1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.flatMini1.BackColor = System.Drawing.Color.White;
-            this.flatMini1.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(47)))), ((int)(((byte)(49)))));
-            this.flatMini1.Font = new System.Drawing.Font("Marlett", 12F);
-            this.flatMini1.Location = new System.Drawing.Point(635, 13);
-            this.flatMini1.Name = "flatMini1";
-            this.flatMini1.Size = new System.Drawing.Size(18, 18);
-            this.flatMini1.TabIndex = 0;
-            this.flatMini1.Text = "flatMini1";
-            this.flatMini1.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            // 
-            // flatClose1
-            // 
-            this.flatClose1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.flatClose1.BackColor = System.Drawing.Color.White;
-            this.flatClose1.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.flatClose1.Font = new System.Drawing.Font("Marlett", 10F);
-            this.flatClose1.Location = new System.Drawing.Point(668, 13);
-            this.flatClose1.Name = "flatClose1";
-            this.flatClose1.Size = new System.Drawing.Size(18, 18);
-            this.flatClose1.TabIndex = 1;
-            this.flatClose1.Text = "flatClose1";
-            this.flatClose1.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            // 
-            // status
-            // 
-            this.status.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(47)))), ((int)(((byte)(49)))));
-            this.status.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.status.Font = new System.Drawing.Font("Segoe UI", 8F);
-            this.status.ForeColor = System.Drawing.Color.White;
-            this.status.Location = new System.Drawing.Point(0, 378);
-            this.status.Name = "status";
-            this.status.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(168)))), ((int)(((byte)(109)))));
-            this.status.ShowTimeDate = false;
-            this.status.Size = new System.Drawing.Size(704, 23);
-            this.status.TabIndex = 9;
-            this.status.TextColor = System.Drawing.Color.White;
-            // 
-            // flatLabel1
-            // 
-            this.flatLabel1.AutoSize = true;
-            this.flatLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.flatLabel1.Font = new System.Drawing.Font("Segoe UI", 8F);
-            this.flatLabel1.ForeColor = System.Drawing.Color.White;
-            this.flatLabel1.Location = new System.Drawing.Point(9, 23);
-            this.flatLabel1.Name = "flatLabel1";
-            this.flatLabel1.Size = new System.Drawing.Size(51, 19);
-            this.flatLabel1.TabIndex = 10;
-            this.flatLabel1.Text = "Post Id";
-            // 
-            // flatLabel2
-            // 
-            this.flatLabel2.AutoSize = true;
-            this.flatLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.flatLabel2.Font = new System.Drawing.Font("Segoe UI", 8F);
-            this.flatLabel2.ForeColor = System.Drawing.Color.White;
-            this.flatLabel2.Location = new System.Drawing.Point(9, 110);
-            this.flatLabel2.Name = "flatLabel2";
-            this.flatLabel2.Size = new System.Drawing.Size(73, 19);
-            this.flatLabel2.TabIndex = 10;
-            this.flatLabel2.Text = "Cache Size";
-            // 
-            // txtPostId
-            // 
-            this.txtPostId.BackColor = System.Drawing.Color.Transparent;
-            this.txtPostId.FocusOnHover = false;
-            this.txtPostId.Location = new System.Drawing.Point(105, 16);
-            this.txtPostId.MaxLength = 32767;
-            this.txtPostId.Multiline = false;
-            this.txtPostId.Name = "txtPostId";
-            this.txtPostId.ReadOnly = false;
-            this.txtPostId.Size = new System.Drawing.Size(369, 34);
-            this.txtPostId.TabIndex = 11;
-            this.txtPostId.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtPostId.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.txtPostId.UseSystemPasswordChar = false;
-            // 
-            // rdRussia
-            // 
-            this.rdRussia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(70)))), ((int)(((byte)(73)))));
-            this.rdRussia.Checked = true;
-            this.rdRussia.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.rdRussia.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.rdRussia.Location = new System.Drawing.Point(13, 65);
-            this.rdRussia.Name = "rdRussia";
-            this.rdRussia.Options = FlatUI.FlatRadioButton._Options.Style1;
-            this.rdRussia.Size = new System.Drawing.Size(139, 22);
-            this.rdRussia.TabIndex = 12;
-            this.rdRussia.Text = "Server Russia";
-            this.rdRussia.CheckedChanged += new FlatUI.FlatRadioButton.CheckedChangedEventHandler(this.rdRussia_CheckedChanged);
-            // 
-            // rdUS
-            // 
-            this.rdUS.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(70)))), ((int)(((byte)(73)))));
-            this.rdUS.Checked = false;
-            this.rdUS.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.rdUS.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.rdUS.Location = new System.Drawing.Point(171, 65);
-            this.rdUS.Name = "rdUS";
-            this.rdUS.Options = FlatUI.FlatRadioButton._Options.Style1;
-            this.rdUS.Size = new System.Drawing.Size(131, 22);
-            this.rdUS.TabIndex = 12;
-            this.rdUS.Text = "Server USA";
-            this.rdUS.CheckedChanged += new FlatUI.FlatRadioButton.CheckedChangedEventHandler(this.rdUS_CheckedChanged);
-            // 
-            // btnStart
-            // 
-            this.btnStart.BackColor = System.Drawing.Color.Transparent;
-            this.btnStart.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(168)))), ((int)(((byte)(109)))));
-            this.btnStart.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnStart.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.btnStart.Location = new System.Drawing.Point(105, 163);
-            this.btnStart.Name = "btnStart";
-            this.btnStart.Rounded = true;
-            this.btnStart.Size = new System.Drawing.Size(369, 32);
-            this.btnStart.TabIndex = 13;
-            this.btnStart.Text = "Start";
-            this.btnStart.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
-            // 
-            // trkCache
-            // 
-            this.trkCache.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(70)))), ((int)(((byte)(73)))));
-            this.trkCache.HatchColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(148)))), ((int)(((byte)(92)))));
-            this.trkCache.Location = new System.Drawing.Point(105, 110);
-            this.trkCache.Maximum = 10;
-            this.trkCache.Minimum = 0;
-            this.trkCache.Name = "trkCache";
-            this.trkCache.ShowValue = true;
-            this.trkCache.Size = new System.Drawing.Size(369, 23);
-            this.trkCache.Style = FlatUI.FlatTrackBar._Style.Slider;
-            this.trkCache.TabIndex = 14;
-            this.trkCache.TrackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(168)))), ((int)(((byte)(109)))));
-            this.trkCache.Value = 5;
-            // 
-            // prgStatus
-            // 
-            this.prgStatus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(70)))), ((int)(((byte)(73)))));
-            this.prgStatus.DarkerProgress = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(148)))), ((int)(((byte)(92)))));
-            this.prgStatus.Location = new System.Drawing.Point(13, 216);
-            this.prgStatus.Maximum = 100;
-            this.prgStatus.Name = "prgStatus";
-            this.prgStatus.Pattern = true;
-            this.prgStatus.PercentSign = true;
-            this.prgStatus.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(168)))), ((int)(((byte)(109)))));
-            this.prgStatus.ShowBalloon = true;
-            this.prgStatus.Size = new System.Drawing.Size(669, 42);
-            this.prgStatus.TabIndex = 15;
-            this.prgStatus.Value = 0;
-            // 
-            // webBrowser1
-            // 
-            this.webBrowser1.Location = new System.Drawing.Point(519, 23);
-            this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
-            this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.Size = new System.Drawing.Size(77, 67);
-            this.webBrowser1.TabIndex = 16;
-            this.webBrowser1.Visible = false;
-            this.webBrowser1.DocumentCompleted += new System.Windows.Forms.WebBrowserDocumentCompletedEventHandler(this.webBrowser1_DocumentCompleted);
-            // 
-            // timer1
-            // 
-            this.timer1.Interval = 1;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // flatTabControl1
             // 
@@ -277,6 +110,128 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Home";
             // 
+            // webBrowser1
+            // 
+            this.webBrowser1.Location = new System.Drawing.Point(519, 23);
+            this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
+            this.webBrowser1.Name = "webBrowser1";
+            this.webBrowser1.Size = new System.Drawing.Size(77, 67);
+            this.webBrowser1.TabIndex = 16;
+            this.webBrowser1.Visible = false;
+            this.webBrowser1.DocumentCompleted += new System.Windows.Forms.WebBrowserDocumentCompletedEventHandler(this.webBrowser1_DocumentCompleted);
+            // 
+            // flatLabel1
+            // 
+            this.flatLabel1.AutoSize = true;
+            this.flatLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.flatLabel1.Font = new System.Drawing.Font("Segoe UI", 8F);
+            this.flatLabel1.ForeColor = System.Drawing.Color.White;
+            this.flatLabel1.Location = new System.Drawing.Point(9, 23);
+            this.flatLabel1.Name = "flatLabel1";
+            this.flatLabel1.Size = new System.Drawing.Size(60, 19);
+            this.flatLabel1.TabIndex = 10;
+            this.flatLabel1.Text = "Post link";
+            // 
+            // flatLabel2
+            // 
+            this.flatLabel2.AutoSize = true;
+            this.flatLabel2.BackColor = System.Drawing.Color.Transparent;
+            this.flatLabel2.Font = new System.Drawing.Font("Segoe UI", 8F);
+            this.flatLabel2.ForeColor = System.Drawing.Color.White;
+            this.flatLabel2.Location = new System.Drawing.Point(9, 110);
+            this.flatLabel2.Name = "flatLabel2";
+            this.flatLabel2.Size = new System.Drawing.Size(73, 19);
+            this.flatLabel2.TabIndex = 10;
+            this.flatLabel2.Text = "Cache Size";
+            // 
+            // prgStatus
+            // 
+            this.prgStatus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(70)))), ((int)(((byte)(73)))));
+            this.prgStatus.DarkerProgress = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(148)))), ((int)(((byte)(92)))));
+            this.prgStatus.Location = new System.Drawing.Point(13, 216);
+            this.prgStatus.Maximum = 100;
+            this.prgStatus.Name = "prgStatus";
+            this.prgStatus.Pattern = true;
+            this.prgStatus.PercentSign = true;
+            this.prgStatus.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(168)))), ((int)(((byte)(109)))));
+            this.prgStatus.ShowBalloon = true;
+            this.prgStatus.Size = new System.Drawing.Size(669, 42);
+            this.prgStatus.TabIndex = 15;
+            this.prgStatus.Value = 0;
+            // 
+            // txtPostId
+            // 
+            this.txtPostId.BackColor = System.Drawing.Color.Transparent;
+            this.txtPostId.FocusOnHover = false;
+            this.txtPostId.Location = new System.Drawing.Point(105, 16);
+            this.txtPostId.MaxLength = 32767;
+            this.txtPostId.Multiline = false;
+            this.txtPostId.Name = "txtPostId";
+            this.txtPostId.ReadOnly = false;
+            this.txtPostId.Size = new System.Drawing.Size(369, 34);
+            this.txtPostId.TabIndex = 11;
+            this.txtPostId.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtPostId.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.txtPostId.UseSystemPasswordChar = false;
+            // 
+            // trkCache
+            // 
+            this.trkCache.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(70)))), ((int)(((byte)(73)))));
+            this.trkCache.HatchColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(148)))), ((int)(((byte)(92)))));
+            this.trkCache.Location = new System.Drawing.Point(105, 110);
+            this.trkCache.Maximum = 10;
+            this.trkCache.Minimum = 0;
+            this.trkCache.Name = "trkCache";
+            this.trkCache.ShowValue = true;
+            this.trkCache.Size = new System.Drawing.Size(369, 23);
+            this.trkCache.Style = FlatUI.FlatTrackBar._Style.Slider;
+            this.trkCache.TabIndex = 14;
+            this.trkCache.TrackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(168)))), ((int)(((byte)(109)))));
+            this.trkCache.Value = 5;
+            // 
+            // rdRussia
+            // 
+            this.rdRussia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(70)))), ((int)(((byte)(73)))));
+            this.rdRussia.Checked = true;
+            this.rdRussia.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.rdRussia.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.rdRussia.Location = new System.Drawing.Point(13, 65);
+            this.rdRussia.Name = "rdRussia";
+            this.rdRussia.Options = FlatUI.FlatRadioButton._Options.Style1;
+            this.rdRussia.Size = new System.Drawing.Size(139, 22);
+            this.rdRussia.TabIndex = 12;
+            this.rdRussia.Text = "Server Russia";
+            this.rdRussia.CheckedChanged += new FlatUI.FlatRadioButton.CheckedChangedEventHandler(this.rdRussia_CheckedChanged);
+            // 
+            // btnStart
+            // 
+            this.btnStart.BackColor = System.Drawing.Color.Transparent;
+            this.btnStart.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(168)))), ((int)(((byte)(109)))));
+            this.btnStart.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnStart.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.btnStart.Location = new System.Drawing.Point(105, 163);
+            this.btnStart.Name = "btnStart";
+            this.btnStart.Rounded = true;
+            this.btnStart.Size = new System.Drawing.Size(369, 32);
+            this.btnStart.TabIndex = 13;
+            this.btnStart.Text = "Start";
+            this.btnStart.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
+            // 
+            // rdUS
+            // 
+            this.rdUS.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(70)))), ((int)(((byte)(73)))));
+            this.rdUS.Checked = false;
+            this.rdUS.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.rdUS.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.rdUS.Location = new System.Drawing.Point(171, 65);
+            this.rdUS.Name = "rdUS";
+            this.rdUS.Options = FlatUI.FlatRadioButton._Options.Style1;
+            this.rdUS.Size = new System.Drawing.Size(131, 22);
+            this.rdUS.TabIndex = 12;
+            this.rdUS.Text = "Server USA";
+            this.rdUS.CheckedChanged += new FlatUI.FlatRadioButton.CheckedChangedEventHandler(this.rdUS_CheckedChanged);
+            // 
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(70)))), ((int)(((byte)(73)))));
@@ -290,17 +245,17 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "About";
             // 
-            // lblinfo
+            // lbldeveloper
             // 
-            this.lblinfo.AutoSize = true;
-            this.lblinfo.BackColor = System.Drawing.Color.Transparent;
-            this.lblinfo.Font = new System.Drawing.Font("Segoe UI", 8F);
-            this.lblinfo.ForeColor = System.Drawing.Color.White;
-            this.lblinfo.Location = new System.Drawing.Point(9, 16);
-            this.lblinfo.Name = "lblinfo";
-            this.lblinfo.Size = new System.Drawing.Size(68, 19);
-            this.lblinfo.TabIndex = 0;
-            this.lblinfo.Text = "flatLabel3";
+            this.lbldeveloper.AutoSize = true;
+            this.lbldeveloper.BackColor = System.Drawing.Color.Transparent;
+            this.lbldeveloper.Font = new System.Drawing.Font("Segoe UI", 8F);
+            this.lbldeveloper.ForeColor = System.Drawing.Color.White;
+            this.lbldeveloper.Location = new System.Drawing.Point(9, 107);
+            this.lbldeveloper.Name = "lbldeveloper";
+            this.lbldeveloper.Size = new System.Drawing.Size(44, 19);
+            this.lbldeveloper.TabIndex = 0;
+            this.lbldeveloper.Text = "lbldec";
             // 
             // lbldec
             // 
@@ -314,17 +269,62 @@
             this.lbldec.TabIndex = 0;
             this.lbldec.Text = "lbldec";
             // 
-            // lbldeveloper
+            // lblinfo
             // 
-            this.lbldeveloper.AutoSize = true;
-            this.lbldeveloper.BackColor = System.Drawing.Color.Transparent;
-            this.lbldeveloper.Font = new System.Drawing.Font("Segoe UI", 8F);
-            this.lbldeveloper.ForeColor = System.Drawing.Color.White;
-            this.lbldeveloper.Location = new System.Drawing.Point(9, 107);
-            this.lbldeveloper.Name = "lbldeveloper";
-            this.lbldeveloper.Size = new System.Drawing.Size(44, 19);
-            this.lbldeveloper.TabIndex = 0;
-            this.lbldeveloper.Text = "lbldec";
+            this.lblinfo.AutoSize = true;
+            this.lblinfo.BackColor = System.Drawing.Color.Transparent;
+            this.lblinfo.Font = new System.Drawing.Font("Segoe UI", 8F);
+            this.lblinfo.ForeColor = System.Drawing.Color.White;
+            this.lblinfo.Location = new System.Drawing.Point(9, 16);
+            this.lblinfo.Name = "lblinfo";
+            this.lblinfo.Size = new System.Drawing.Size(68, 19);
+            this.lblinfo.TabIndex = 0;
+            this.lblinfo.Text = "flatLabel3";
+            // 
+            // status
+            // 
+            this.status.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(47)))), ((int)(((byte)(49)))));
+            this.status.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.status.Font = new System.Drawing.Font("Segoe UI", 8F);
+            this.status.ForeColor = System.Drawing.Color.White;
+            this.status.Location = new System.Drawing.Point(0, 378);
+            this.status.Name = "status";
+            this.status.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(168)))), ((int)(((byte)(109)))));
+            this.status.ShowTimeDate = false;
+            this.status.Size = new System.Drawing.Size(704, 23);
+            this.status.TabIndex = 9;
+            this.status.TextColor = System.Drawing.Color.White;
+            // 
+            // flatClose1
+            // 
+            this.flatClose1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.flatClose1.BackColor = System.Drawing.Color.White;
+            this.flatClose1.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.flatClose1.Font = new System.Drawing.Font("Marlett", 10F);
+            this.flatClose1.Location = new System.Drawing.Point(668, 13);
+            this.flatClose1.Name = "flatClose1";
+            this.flatClose1.Size = new System.Drawing.Size(18, 18);
+            this.flatClose1.TabIndex = 1;
+            this.flatClose1.Text = "flatClose1";
+            this.flatClose1.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            // 
+            // flatMini1
+            // 
+            this.flatMini1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.flatMini1.BackColor = System.Drawing.Color.White;
+            this.flatMini1.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(47)))), ((int)(((byte)(49)))));
+            this.flatMini1.Font = new System.Drawing.Font("Marlett", 12F);
+            this.flatMini1.Location = new System.Drawing.Point(635, 13);
+            this.flatMini1.Name = "flatMini1";
+            this.flatMini1.Size = new System.Drawing.Size(18, 18);
+            this.flatMini1.TabIndex = 0;
+            this.flatMini1.Text = "flatMini1";
+            this.flatMini1.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 1;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // Form1
             // 

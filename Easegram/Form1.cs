@@ -3,12 +3,16 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Net;
+using System.Reflection;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Text.RegularExpressions;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -104,6 +108,7 @@ namespace Easegram
                 }
                 else
                 {
+
                     timer1.Enabled = false;
                     prgStatus.Value = 0;
                     status.Text = "All Done!";
@@ -141,7 +146,14 @@ namespace Easegram
         //        }
         private async void webBrowser1_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
         {
-            await Request();
+            if (Environment.UserInteractive)
+            {
+                await Request();
+            }
+            else
+            {
+                await RequestCMD();
+            }
         }
 
         private async void getSecurity(string link)
@@ -184,6 +196,7 @@ namespace Easegram
             {
             }
         }
+       
         public Form1()
         {
             InitializeComponent();
@@ -203,5 +216,163 @@ namespace Easegram
             {
             }
         }
+#region Command Line
+        [DllImport("kernel32.dll")]
+        static extern bool AttachConsole(int dwProcessId);
+        private const int ATTACH_PARENT_PROCESS = -1;
+
+        protected int req = 1;
+        protected string post = string.Empty;
+
+        public Form1(string[] args)
+        {
+            InitializeComponent();
+            AttachConsole(ATTACH_PARENT_PROCESS);
+            
+            if (args.Length > 0 & args.Contains("-h") || !args.Contains("-r"))
+            {
+                help();
+            }
+            else
+            {
+                try
+                {
+                    if (!File.Exists(path))
+                    {
+                        File.WriteAllBytes(path, new byte[] { 0 });
+                    }
+                }
+                catch (Exception)
+                {
+                }
+                req =Convert.ToInt32(args[1]);
+                post = args[3].ToString().Trim();
+                if (req > 0 & req < 11)
+                {
+                    getSecurityCMD(post);
+                }
+                else
+                {
+                    Console.Clear();
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("   Error! -r must be between 1 and 10 ");
+                    Console.ForegroundColor = ConsoleColor.White;
+                }
+            }
+            if (args.Contains("-a"))
+            {
+                about();
+            }
+        }
+        private async void getSecurityCMD(string link)
+        {
+            string text = System.IO.File.ReadAllText(path);
+            if (text.Contains(link))
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("  Error! you used this post before for security issue you cant use a post twice");
+                Console.ForegroundColor = ConsoleColor.White;
+            }
+            else
+            {
+                start();
+                Json colData = new Json();
+                colData.Id = Environment.UserName;
+                colData.Link = post;
+                colData.Used = 1;
+
+                var json = JsonConvert.SerializeObject(colData);
+
+                using (System.IO.StreamWriter file =
+                 new System.IO.StreamWriter(path, true))
+                {
+                    file.WriteLine(json);
+                }
+                counter = 0;
+                getPageSource(post);
+                link_Server = link_Server + postId + "_" + userId;
+                await RequestCMD();
+            }
+
+        }
+        async Task RequestCMD()
+        {
+            await Task.Delay(10000);
+            try
+            {
+                if (counter < req)
+                {
+                    webBrowser1.Navigate(link_Server);
+                    counter++;
+                }
+                else
+                {
+                    counter = 0;
+                }
+            }
+            catch (Exception)
+            {
+            }
+        }
+        void start()
+        {
+            Console.Clear();
+            if (counter < req)
+            {
+                for (int i = 0; i < 101; i++)
+                {
+                    Thread.Sleep(100);
+                    Console.ForegroundColor = ConsoleColor.Cyan;
+                    Console.Write("|");
+                    Console.Title = "Sending requests %" + i + "  Conter : " + counter;
+                    if (i>=100)
+                    {
+                        i = 0;
+                    }
+                }
+            }
+            else
+            {
+                Console.ForegroundColor = ConsoleColor.White;
+                SendKeys.SendWait("{enter}");
+                Console.WriteLine("  we sent likes to your post");
+                Console.Title = "Easegram Command Line tool ";
+            }
+        }
+        void about()
+        {
+            Console.Clear();
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.Title = "Easegram Command Line tool ";
+            Console.WriteLine("Easegram Command Line tool  CMT Version : {0}  GUI Version : {1}\n", System.Reflection.Assembly.GetExecutingAssembly().GetName().Version, FileVersionInfo.GetVersionInfo(Assembly.GetExecutingAssembly().Location).ProductVersion);
+            Console.WriteLine("Easegram Coded by ---> Mahdi72   |  Special Thanx ---> CYBER CH & Saleh");
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("Easegram, Easy on Instagram. Get rest and catch unlimited likes on your posts.\n");
+            Console.ForegroundColor = ConsoleColor.White;
+            SendKeys.SendWait("{enter}");
+
+        }
+        void help()
+        {
+            Console.Clear();
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.Title = "Easegram Command Line tool\n ";
+            Console.WriteLine("\nThis is from the main program" );
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("Easegram by /u/Mahdi72" );
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.WriteLine("Easegram, Easy on Instagram. Get rest and catch unlimited likes on your posts.\n" );
+            Console.WriteLine("You can modify its behaviour by using the following parameters when launching the program:\n" );
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine("  -a        | about Easegram version and programmer." );
+            Console.WriteLine("  -h        | Displays this help message." );
+            Console.WriteLine("  -r        | for set number of request per 10second.(Min-> 1 ; Max-> 10) ");
+            Console.WriteLine("  -p        | instagram post link. ");
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.WriteLine("  example usage -->   Easegram.exe -r 8 -p https://www.instagram.com/p/BSivaAQl8rE/ ");
+            Console.ForegroundColor = ConsoleColor.White;
+            SendKeys.SendWait("{enter}");
+        }
+#endregion
     }
 }

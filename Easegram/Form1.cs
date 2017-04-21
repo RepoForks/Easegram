@@ -1,16 +1,10 @@
-﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+﻿using System;
 using System.Diagnostics;
-using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Net;
 using System.Reflection;
 using System.Runtime.InteropServices;
-using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading;
 using System.Threading.Tasks;
@@ -23,9 +17,8 @@ namespace Easegram
         protected string link_Server = "http://ru1media.cf/add?id=";
         protected string postId, userId;
         protected int counter = 0;
-        protected string path = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + @"\Microsoft\security.code";
 
-        private void btnStart_Click(object sender, EventArgs e)
+        private async void btnStart_Click(object sender, EventArgs e)
         {
             if (txtPostId.Text == string.Empty)
             {
@@ -35,7 +28,11 @@ namespace Easegram
             {
                 try
                 {
-                    getSecurity(txtPostId.Text);
+                    counter = 0;
+                    timer1.Enabled = true;
+                    getPageSource(txtPostId.Text);
+                    link_Server = link_Server + postId + "_" + userId;
+                    await Request();
                 }
                 catch (Exception)
                 {
@@ -155,47 +152,6 @@ namespace Easegram
                 await RequestCMD();
             }
         }
-
-        private async void getSecurity(string link)
-        {
-            string text = System.IO.File.ReadAllText(path);
-            if (text.Contains(link))
-            {
-                status.Text = "Error! you used this post before for security issue you cant use a post twice";
-                txtPostId.Text = string.Empty;
-            }
-            else
-            {
-                security();
-                counter = 0;
-                timer1.Enabled = true;
-                getPageSource(txtPostId.Text);
-                link_Server = link_Server + postId + "_" + userId;
-                await Request();
-            }
-
-        }
-        private void security()
-        {
-            try
-            {
-                Json colData = new Json();
-                colData.Id = Environment.UserName;
-                colData.Link = txtPostId.Text;
-                colData.Used = 1;
-
-                var json = JsonConvert.SerializeObject(colData);
-
-                using (System.IO.StreamWriter file =
-                 new System.IO.StreamWriter(path, true))
-                {
-                    file.WriteLine(json);
-                }
-            }
-            catch (Exception)
-            {
-            }
-        }
        
         public Form1()
         {
@@ -205,16 +161,6 @@ namespace Easegram
             lbldeveloper.Text = "Coded By : Mahdi72\n Special TNX : CYBER CH";
 
             status.Text = "Ready... " + "   " + System.Reflection.Assembly.GetExecutingAssembly().GetName().Name + System.Reflection.Assembly.GetExecutingAssembly().GetName().Version;
-            try
-            {
-                if (!File.Exists(path))
-                {
-                    File.WriteAllBytes(path, new byte[] { 0 });
-                }
-            }
-            catch (Exception)
-            {
-            }
         }
 #region Command Line
         [DllImport("kernel32.dll")]
@@ -235,21 +181,11 @@ namespace Easegram
             }
             else
             {
-                try
-                {
-                    if (!File.Exists(path))
-                    {
-                        File.WriteAllBytes(path, new byte[] { 0 });
-                    }
-                }
-                catch (Exception)
-                {
-                }
                 req =Convert.ToInt32(args[1]);
                 post = args[3].ToString().Trim();
                 if (req > 0 & req < 11)
                 {
-                    getSecurityCMD(post);
+                    StartCMD();
                 }
                 else
                 {
@@ -264,35 +200,13 @@ namespace Easegram
                 about();
             }
         }
-        private async void getSecurityCMD(string link)
+        private async void StartCMD()
         {
-            string text = System.IO.File.ReadAllText(path);
-            if (text.Contains(link))
-            {
-                Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine("  Error! you used this post before for security issue you cant use a post twice");
-                Console.ForegroundColor = ConsoleColor.White;
-            }
-            else
-            {
-                start();
-                Json colData = new Json();
-                colData.Id = Environment.UserName;
-                colData.Link = post;
-                colData.Used = 1;
-
-                var json = JsonConvert.SerializeObject(colData);
-
-                using (System.IO.StreamWriter file =
-                 new System.IO.StreamWriter(path, true))
-                {
-                    file.WriteLine(json);
-                }
-                counter = 0;
-                getPageSource(post);
-                link_Server = link_Server + postId + "_" + userId;
-                await RequestCMD();
-            }
+            start();
+            counter = 0;
+            getPageSource(post);
+            link_Server = link_Server + postId + "_" + userId;
+            await RequestCMD();
 
         }
         async Task RequestCMD()

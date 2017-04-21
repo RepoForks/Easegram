@@ -179,7 +179,7 @@
             this.trkCache.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(70)))), ((int)(((byte)(73)))));
             this.trkCache.HatchColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(148)))), ((int)(((byte)(92)))));
             this.trkCache.Location = new System.Drawing.Point(105, 110);
-            this.trkCache.Maximum = 10;
+            this.trkCache.Maximum = 20;
             this.trkCache.Minimum = 0;
             this.trkCache.Name = "trkCache";
             this.trkCache.ShowValue = true;

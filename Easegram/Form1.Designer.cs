@@ -32,6 +32,8 @@
             this.FlatSkin = new FlatUI.FormSkin();
             this.flatTabControl1 = new FlatUI.FlatTabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.flatLabel3 = new FlatUI.FlatLabel();
+            this.lbllike = new FlatUI.FlatLabel();
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             this.flatLabel1 = new FlatUI.FlatLabel();
             this.flatLabel2 = new FlatUI.FlatLabel();
@@ -49,8 +51,6 @@
             this.flatClose1 = new FlatUI.FlatClose();
             this.flatMini1 = new FlatUI.FlatMini();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.lbllike = new FlatUI.FlatLabel();
-            this.flatLabel3 = new FlatUI.FlatLabel();
             this.FlatSkin.SuspendLayout();
             this.flatTabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -113,6 +113,29 @@
             this.tabPage1.Size = new System.Drawing.Size(696, 284);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Home";
+            // 
+            // flatLabel3
+            // 
+            this.flatLabel3.AutoSize = true;
+            this.flatLabel3.BackColor = System.Drawing.Color.Transparent;
+            this.flatLabel3.Font = new System.Drawing.Font("Segoe UI", 8F);
+            this.flatLabel3.ForeColor = System.Drawing.Color.White;
+            this.flatLabel3.Location = new System.Drawing.Point(6, 176);
+            this.flatLabel3.Name = "flatLabel3";
+            this.flatLabel3.Size = new System.Drawing.Size(39, 19);
+            this.flatLabel3.TabIndex = 18;
+            this.flatLabel3.Text = "Likes";
+            // 
+            // lbllike
+            // 
+            this.lbllike.AutoSize = true;
+            this.lbllike.BackColor = System.Drawing.Color.Transparent;
+            this.lbllike.Font = new System.Drawing.Font("Segoe UI", 8F);
+            this.lbllike.ForeColor = System.Drawing.Color.White;
+            this.lbllike.Location = new System.Drawing.Point(60, 176);
+            this.lbllike.Name = "lbllike";
+            this.lbllike.Size = new System.Drawing.Size(0, 19);
+            this.lbllike.TabIndex = 17;
             // 
             // webBrowser1
             // 
@@ -329,29 +352,6 @@
             // 
             this.timer1.Interval = 1;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // lbllike
-            // 
-            this.lbllike.AutoSize = true;
-            this.lbllike.BackColor = System.Drawing.Color.Transparent;
-            this.lbllike.Font = new System.Drawing.Font("Segoe UI", 8F);
-            this.lbllike.ForeColor = System.Drawing.Color.White;
-            this.lbllike.Location = new System.Drawing.Point(611, 176);
-            this.lbllike.Name = "lbllike";
-            this.lbllike.Size = new System.Drawing.Size(0, 19);
-            this.lbllike.TabIndex = 17;
-            // 
-            // flatLabel3
-            // 
-            this.flatLabel3.AutoSize = true;
-            this.flatLabel3.BackColor = System.Drawing.Color.Transparent;
-            this.flatLabel3.Font = new System.Drawing.Font("Segoe UI", 8F);
-            this.flatLabel3.ForeColor = System.Drawing.Color.White;
-            this.flatLabel3.Location = new System.Drawing.Point(557, 176);
-            this.flatLabel3.Name = "flatLabel3";
-            this.flatLabel3.Size = new System.Drawing.Size(39, 19);
-            this.flatLabel3.TabIndex = 18;
-            this.flatLabel3.Text = "Likes";
             // 
             // Form1
             // 

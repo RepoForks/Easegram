@@ -49,6 +49,8 @@
             this.flatClose1 = new FlatUI.FlatClose();
             this.flatMini1 = new FlatUI.FlatMini();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.lbllike = new FlatUI.FlatLabel();
+            this.flatLabel3 = new FlatUI.FlatLabel();
             this.FlatSkin.SuspendLayout();
             this.flatTabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -94,6 +96,8 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(70)))), ((int)(((byte)(73)))));
+            this.tabPage1.Controls.Add(this.flatLabel3);
+            this.tabPage1.Controls.Add(this.lbllike);
             this.tabPage1.Controls.Add(this.webBrowser1);
             this.tabPage1.Controls.Add(this.flatLabel1);
             this.tabPage1.Controls.Add(this.flatLabel2);
@@ -326,6 +330,29 @@
             this.timer1.Interval = 1;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // lbllike
+            // 
+            this.lbllike.AutoSize = true;
+            this.lbllike.BackColor = System.Drawing.Color.Transparent;
+            this.lbllike.Font = new System.Drawing.Font("Segoe UI", 8F);
+            this.lbllike.ForeColor = System.Drawing.Color.White;
+            this.lbllike.Location = new System.Drawing.Point(611, 176);
+            this.lbllike.Name = "lbllike";
+            this.lbllike.Size = new System.Drawing.Size(0, 19);
+            this.lbllike.TabIndex = 17;
+            // 
+            // flatLabel3
+            // 
+            this.flatLabel3.AutoSize = true;
+            this.flatLabel3.BackColor = System.Drawing.Color.Transparent;
+            this.flatLabel3.Font = new System.Drawing.Font("Segoe UI", 8F);
+            this.flatLabel3.ForeColor = System.Drawing.Color.White;
+            this.flatLabel3.Location = new System.Drawing.Point(557, 176);
+            this.flatLabel3.Name = "flatLabel3";
+            this.flatLabel3.Size = new System.Drawing.Size(39, 19);
+            this.flatLabel3.TabIndex = 18;
+            this.flatLabel3.Text = "Likes";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -371,6 +398,8 @@
         private FlatUI.FlatLabel lblinfo;
         private FlatUI.FlatLabel lbldec;
         private FlatUI.FlatLabel lbldeveloper;
+        private FlatUI.FlatLabel lbllike;
+        private FlatUI.FlatLabel flatLabel3;
     }
 }
 

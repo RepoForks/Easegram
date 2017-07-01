@@ -17,7 +17,7 @@ and more...
 
 # Download
 You can download the program (prebuilt executables and source snapshots) [via the releases tab](https://github.com/ghost1372/Easegram/releases).
-~~You can download the program (prebuilt executables and source snapshots) [via the releases tab](https://github.com/ghost1372/Easegram/releases).
+~~You can download the program (prebuilt executables and source snapshots) [via the releases tab](https://github.com/ghost1372/Easegram/releases)
 
 ## Thanks
 

@@ -15,6 +15,7 @@ Decode Instagram posts html code and extract PostId & UserId
 get Unlimmited like on your instagram posts
 Completly Free and Open Source
 AsyncTask and Fast
+It takes at least 10-20 minutes (its Normal because take real likes)
 and more...
 
 # Download

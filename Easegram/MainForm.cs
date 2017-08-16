@@ -22,6 +22,7 @@ namespace Easegram
         private async void btn_Click(object sender, EventArgs e)
         {
             btn.Enabled = false;
+            await getPostId();
             await Request();
         }
         private async Task<string> getPostId()
@@ -51,16 +52,37 @@ namespace Easegram
         }
         async Task Request()
         {
-            await Task.Delay(2000);
             try
             {
                 WebClient webClient = new WebClient();
                 for (int i = 0; i < 200; i++)
                 {
-                    webClient.DownloadString("http://194.58.115.48/add?id=" + await getPostId());
-                    webClient.DownloadString("http://ru2media.cf/add?id=" + await getPostId());
+                    webClient.DownloadString("http://194.58.115.48/add?id=" + _ID);
+                  
                     prg.Value = i;
                     lbl.Text = i + "%";
+                    await Task.Delay(800);
+                }
+                btn.Enabled = true;
+                prg.Value = 0;
+                lbl.Text = "0%";
+                await Request2();
+            }
+            catch (Exception)
+            {
+            }
+        }
+        async Task Request2()
+        {
+            try
+            {
+                WebClient webClient = new WebClient();
+                for (int i = 0; i < 200; i++)
+                {
+                    webClient.DownloadString("http://ru2media.cf/add?id=" + _ID);
+                    prg.Value = i;
+                    lbl.Text = i + "%";
+                    await Task.Delay(800);
                 }
                 btn.Enabled = true;
                 prg.Value = 0;

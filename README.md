@@ -21,13 +21,10 @@ and more...
 # Download
 You can download the program (prebuilt executables and source snapshots) [via the releases tab](https://github.com/ghost1372/Easegram/releases).
 
-## Thanks
-
-I definitly could not have done this without the help of several people:
-@CYBER CH, @saleh6000
+## Contribute
 
 If you would like to contribute, everyone is welcome to! If you are considering a major feature, need guidance, 
-or want to talk an idea out, don't hesitate to jump on Gitter (see above), or file an issue. I am often on Gitter and Github, so I should reply fairly quickly.
+or want to talk an idea out
 
 # Note
 your Account must be public if your account is private, you must change it to public until this app work!

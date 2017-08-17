@@ -61,11 +61,13 @@ namespace Easegram
                   
                     prg.Value = i;
                     lbl.Text = i + "%";
-                    await Task.Delay(800);
+                    await Task.Delay(400);
                 }
                 btn.Enabled = true;
                 prg.Value = 0;
                 lbl.Text = "0%";
+                if (chk.Checked)
+                    await Request();
                 await Request2();
             }
             catch (Exception)

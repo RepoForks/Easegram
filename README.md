@@ -2,8 +2,8 @@
 # Easegram
 ![Optional Text](Screen.png)
 
-
-<b>Update 2017/08/15 New Servers Added App Work Perfectlly</b>
+#  This project will no longer be supported
+<b>Update 2017/12/03 All Servers Disabled</b>
 <br>Desktop Application for Increase Instagram post likes<br>
 Easegram, Easy on Instagram. Get rest and catch unlimited likes on your posts.<br>
 # Used Language
